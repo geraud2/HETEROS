@@ -117,7 +117,7 @@ export function SplashScreen({ onComplete, minDuration = 2500 }: SplashScreenPro
                 key={percent}
                 className="w-2 h-2 rounded-full bg-white/30 animate-pulse"
                 style={{
-                  animationDelay: `${percent * 20}ms`
+                  animationDelay: `${percent * 80}ms`
                 }}
               />
             ))}

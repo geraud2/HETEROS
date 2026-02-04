@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroSilhouette from "@/assets/hero-silhouette.jpg";
+import heroSilhouettes from "@/assets/hero-silhouettes.jpg";
 import heroSilhouettee from "@/assets/hero-silhouettee.jpg";
 import heroSilhouetteee from "@/assets/hero-silhouetteee.jpg";
 import { 
@@ -13,7 +13,7 @@ import {
  } from "lucide-react";
 
 const bannerImages = [
-   heroSilhouette,
+   heroSilhouettes,
    heroSilhouettee,
    heroSilhouetteee,
 ];

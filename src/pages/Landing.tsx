@@ -81,21 +81,21 @@ export default function Landing() {
           ))}
         </div>
 
-        <button
+        {/* <button
           onClick={prevImage}
           className="absolute left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/30 backdrop-blur-sm border border-white/20 hover:bg-black/50 transition-all group"
           aria-label="Image précédente"
         >
           <ArrowLeft className="w-6 h-6 text-white group-hover:text-amber-400 transition-colors" />
-        </button>
+        </button> */}
 
-        <button
+        {/* <button
           onClick={nextImage}
           className="absolute right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/30 backdrop-blur-sm border border-white/20 hover:bg-black/50 transition-all group"
           aria-label="Image suivante"
         >
           <ArrowRight className="w-6 h-6 text-white group-hover:text-amber-400 transition-colors" />
-        </button>
+        </button> */}
 
         {/* Hero Content avec meilleur contraste */}
         <div className="container mx-auto px-6 relative z-10">
@@ -172,14 +172,14 @@ export default function Landing() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="flex flex-col items-center">
             <div className="text-xs text-amber-400 mb-2 tracking-widest">EXPLORER</div>
             <div className="w-6 h-10 rounded-full border border-amber-500/40 flex items-start justify-center pt-2">
               <div className="w-1 h-3 bg-gradient-to-b from-amber-400 to-amber-500 rounded-full animate-pulse" />
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Features Section avec plus de contraste */}

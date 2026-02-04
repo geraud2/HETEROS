@@ -492,9 +492,8 @@ import {
  } from "lucide-react";
 // CORRECTION : Importer les images depuis le dossier public avec des chemins absolus
 // // Si les images n'existent pas encore, tu peux les créer ou utiliser des placeholders
-const POO = "/POO.jpg"; 
 const VRAI = "/VRAI.jpg";
- const FAUX = "/FAUX.jpg";
+ const H45 = "/H45.jpg";
   
 
 // // Alternative : Si tu veux mettre les images dans src/assets, crée le dossier et déplace-les
@@ -503,9 +502,8 @@ const VRAI = "/VRAI.jpg";
 // // import heroSilhouetteee from "@/assets/hero-silhouetteee.jpg";
 
  const bannerImages = [
-  POO,
    VRAI,
-   FAUX,
+   H45,
    
  ];
 

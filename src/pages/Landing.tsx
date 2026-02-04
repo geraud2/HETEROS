@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroSilhouettes from "@/public/hero-silhouettes.jpg";
-import heroSilhouettee from "@/assets/hero-silhouettee.jpg";
-import heroSilhouetteee from "@/assets/hero-silhouetteee.jpg";
 import { 
   Check, Shield, Lock, Users, MessageSquare, 
   Sparkles, ChevronRight, EyeOff, VenetianMask, 
@@ -11,6 +8,17 @@ import {
   ArrowRight, ArrowLeft, Heart, Trophy, Settings,
   Calendar, Clock, ShieldCheck
  } from "lucide-react";
+
+// CORRECTION : Importer les images depuis le dossier public avec des chemins absolus
+// Si les images n'existent pas encore, tu peux les créer ou utiliser des placeholders
+const heroSilhouettes = "/hero-silhouettes.jpg";
+const heroSilhouettee = "/hero-silhouettee.jpg";
+const heroSilhouetteee = "/hero-silhouetteee.jpg";
+
+// Alternative : Si tu veux mettre les images dans src/assets, crée le dossier et déplace-les
+// import heroSilhouettes from "@/assets/hero-silhouettes.jpg";
+// import heroSilhouettee from "@/assets/hero-silhouettee.jpg";
+// import heroSilhouetteee from "@/assets/hero-silhouetteee.jpg";
 
 const bannerImages = [
    heroSilhouettes,
@@ -65,13 +73,21 @@ export default function Landing() {
               <div className="relative w-full h-full">
                 <img
                   src={image}
-                  alt=""
+                  alt={`Hero image ${index + 1}`}
                   className={`w-full h-full object-cover ${
                     isMobile ? 'object-center scale-110' : 'object-center'
                   }`}
                   style={{ 
                     filter: 'brightness(0.85)',
                     objectPosition: isMobile ? 'center 30%' : 'center'
+                  }}
+                  onError={(e) => {
+                    // Fallback si l'image n'existe pas
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.style.background = 
+                      index === 0 ? 'linear-gradient(135deg, #1a1a1a 0%, #000 100%)' :
+                      index === 1 ? 'linear-gradient(135deg, #0f172a 0%, #000 100%)' :
+                      'linear-gradient(135deg, #111827 0%, #000 100%)';
                   }}
                 />
               </div>

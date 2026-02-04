@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { SplashScreen } from "@/components/SplashScreen";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { TopNav } from "@/components/layout/Topnav";
 import Landing from "./pages/Landing";
 import Explorer from "./pages/Explorer";
 import Access from "./pages/Access";
